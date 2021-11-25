@@ -1,0 +1,77 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.container {
+    display: inline-block;
+    margin: 20px;
+    padding: 20px;
+}
+
+.container__heading {
+    margin-top: 0;
+}
+
+.sports {
+    width: 500px;
+}
+
+.sport__label {
+    display: flex;
+    align-items: center;
+}
+
+.sport__label + .sport__label {
+    margin-top: 25px;
+}
+
+.checkbox:disabled + .sport__controller {
+    opacity: 0.5;
+}
+
+.checkbox:disabled ~ .sport__name {
+    opacity: 0.5;
+}
+
+.sport__controller {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+    background-position: center;
+}
+
+.sport__label:nth-child(1) .checkbox:checked+.sport__controller {
+    background-image: url(../ikonkalar/table-tennis.png);
+}
+
+.sport__label:nth-child(2) .checkbox:checked+.sport__controller {
+    background-image: url(../ikonkalar/basketball-ball.png);
+}
+
+.sport__label:nth-child(3) .checkbox:checked+.sport__controller {
+    background-image: url(../ikonkalar/volleyball-ball.png);
+}
+
+.sport__label:nth-child(4) .checkbox:checked+.sport__controller {
+    background-image: url(../ikonkalar/hockey-puck.png);
+}
